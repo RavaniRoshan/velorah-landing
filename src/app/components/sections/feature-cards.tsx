@@ -26,30 +26,24 @@ function FeatureCard({
     >
       {/* Blurred gradient glow */}
       <div
-        className="absolute w-full h-[260px] md:h-[300px] opacity-60 rounded-[40px] pointer-events-none"
+        className="absolute w-full h-[260px] md:h-[300px] opacity-40 rounded-[40px] pointer-events-none"
         style={{ background: gradient, filter: "blur(45px)" }}
       />
 
-      {/* Foreground card with gradient border */}
-      <div
-        className="relative self-stretch h-[260px] md:h-[300px] rounded-[40px] z-10 overflow-hidden"
-        style={{
-          border: "8px solid transparent",
-          background: `linear-gradient(#072031, #072031) padding-box, ${gradient} border-box`,
-        }}
-      >
-        <div className="w-full h-full p-7 flex flex-col justify-between">
-          <div className="text-white/90">
+      {/* Foreground liquid glass card */}
+      <div className="liquid-glass relative self-stretch h-[260px] md:h-[300px] rounded-[40px] z-10 overflow-hidden">
+        <div className="w-full h-full p-7 flex flex-col justify-between relative z-10">
+          <div className="text-foreground/90">
             <Icon size={32} strokeWidth={2.5} />
           </div>
           <div>
             <h3
-              className="text-white font-medium text-xl mb-3 tracking-tight"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
+              className="font-medium text-xl mb-3 tracking-tight"
+              style={{ fontFamily: "'Instrument Serif', serif", color: "#E1E0CC" }}
             >
               {title}
             </h3>
-            <p className="text-gray-400 text-[14px] leading-[1.6] font-normal selection:bg-white/20">
+            <p className="text-muted-foreground text-[14px] leading-[1.6] font-normal selection:bg-white/20">
               {description}
             </p>
           </div>
@@ -66,7 +60,7 @@ const cards: FeatureCardProps[] = [
     delay: 0.1,
     description:
       "A workspace engineered for power and quiet. It is calm, durable, and holds your attention when it matters most.",
-    gradient: "linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%)",
+    gradient: "linear-gradient(137deg, #5b9ffb 0%, #1e5dd7 50%, #1448be 100%)",
   },
   {
     title: "The Canvas",
@@ -74,7 +68,7 @@ const cards: FeatureCardProps[] = [
     delay: 0.2,
     description:
       "Studio is where you define every pixel. It is the hub for each idea, each draft, and each canvas you deliver.",
-    gradient: "linear-gradient(137deg, #FFFFFF 0%, #7DD3FC 45%, #06B6D4 100%)",
+    gradient: "linear-gradient(137deg, #DEDBC8 0%, #9db8d8 45%, #2a6cc4 100%)",
   },
   {
     title: "In Motion",
@@ -82,7 +76,7 @@ const cards: FeatureCardProps[] = [
     delay: 0.3,
     description:
       "Build lively prototypes that feel alive, bridging the gap between a fleeting view and finished, shipped work.",
-    gradient: "linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #F72585 100%)",
+    gradient: "linear-gradient(137deg, #2a6cc4 0%, #4a90d9 50%, #DEDBC8 100%)",
   },
 ];
 

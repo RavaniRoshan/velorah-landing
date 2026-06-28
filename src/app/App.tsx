@@ -10,7 +10,7 @@ import { Footer } from "./components/sections/footer";
 
 export default function App() {
   return (
-    <div className="relative w-full bg-background text-foreground overflow-x-hidden">
+    <div className="relative w-full text-foreground overflow-x-hidden" style={{ backgroundColor: "#000000" }}>
       {/* Hero — video pinned to this block only */}
       <div className="relative min-h-screen w-full overflow-hidden">
         <VideoBackground />
@@ -24,13 +24,13 @@ export default function App() {
         </div>
       </div>
 
-      {/* Scrolling sections over the navy background */}
-      <FeatureCards />
-      <BentoGrid />
-      <Stats />
-      <Faq />
-      <CtaBand />
-      <Footer />
+      {/* Section backgrounds */}
+      <div style={{ backgroundColor: "#000000" }}><FeatureCards /></div>
+      <div style={{ backgroundColor: "#0a0a0a" }}><BentoGrid /></div>
+      <div style={{ backgroundColor: "#1a1a1a" }}><Stats /></div>
+      <div style={{ backgroundColor: "#000000" }}><Faq /></div>
+      <div style={{ backgroundColor: "#000000" }}><CtaBand /></div>
+      <div style={{ backgroundColor: "#000000" }}><Footer /></div>
     </div>
   );
 }
